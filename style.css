@@ -1,0 +1,202 @@
+/*Navbar Styling*/
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+.rounded-logo {
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%;
+    margin-left: 15px;
+    background-color: #f8f9fa; 
+    border: 2px solid #007bff; 
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rounded-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.logo-text {
+    font-size: 14;
+    font-weight: bold;
+    font-family: Montserrat;
+    margin-left: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0px;
+    color: #061E3B; 
+}
+.navbar-custom-buttons{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.nav-link{
+    margin-left: 10px; 
+    font-size: 14;
+    font-weight: bold;
+    font-family: Montserrat;
+}
+
+
+/*Fixed Sidebar Styling*/
+body {
+    overflow-x: hidden;
+}
+.navbar {
+    z-index: 1100;
+}
+.sidebar {
+    height: calc(100vh - 56px); /* Adjust height based on the navbar height */
+    width: 250px;
+    position: fixed;
+    top: 60px; /* Height of the navbar */
+    left: 0;
+    background-color: #343a40;
+    padding-top: 20px;
+}
+.sidebar .nav-link {
+    color: #fff;
+    padding: 15px;
+}
+.sidebar .nav-link:hover {
+    background-color: #495057;
+}
+.sidebar .dropdown-menu {
+    background-color: #343a40; /* Match sidebar background */
+}
+.sidebar .dropdown-item {
+    font-size: 14px;
+    font-family: Montserrat;
+    font-weight: bold;
+    color: #fff;
+}
+.sidebar .dropdown-item:hover {
+    background-color: #495057;
+}
+
+
+/*Chart Styling*/
+.content {
+    margin-left: 250px;
+    padding: 20px;
+}
+.chart-container {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+}
+.chart-container h6{
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Montserrat;
+    color: #061E3B;
+}
+.chart-container h5{
+    font-size: 20px;
+    font-family: Montserrat;
+    font-weight: bold;
+    text-align: center;
+}
+@media (max-width: 767px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        top: 0;
+    }
+    .content {
+        margin-left: 0;
+    }
+}
+
+
+/*Styling Untuk Judul*/
+.title-container{
+    position: relative;
+    margin-left: 250px;
+}
+.title-container h3{
+    padding: 20px 20px 10px;
+    font-weight: bold;
+    font-family: Montserrat;
+}
+.title-container h6{
+    padding: 0 20px;
+    font-weight: bold;
+    font-family: Montserrat;
+}
+
+
+/*Styling Untuk Dropdown Pada Dasboard*/
+.dropdown-sort {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+}
+.dropdown-sort .dropbtn {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.dropdown-sort .dropbtn span {
+    margin-left: 5px;
+}
+.dropdown-sort .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-sort .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-sort .dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+.dropdown-sort:hover .dropdown-content {
+    display: block;
+}
+
+/*Homepage Styling*/
+.custom-border {
+    border: 2px solid #ff5733; 
+    padding: 15px;
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+.image-padding {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+}
+.paragraph-area {
+    display: flex;
+    align-items: center; 
+}
+.paragraph-area img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+

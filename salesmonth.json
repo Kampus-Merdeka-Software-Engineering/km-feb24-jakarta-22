@@ -1,0 +1,62 @@
+[
+  {
+    "Month": "Januari",
+    "Income": "$69,793.30",
+    "Persentase Naik / Turun": "-"
+  },
+  {
+    "Month": "Februari",
+    "Income": "$65,159.60",
+    "Persentase Naik / Turun": -6.64
+  },
+  {
+    "Month": "Maret",
+    "Income": "$70,397.10",
+    "Persentase Naik / Turun": 8.04
+  },
+  {
+    "Month": "April",
+    "Income": "$68,736.80",
+    "Persentase Naik / Turun": -2.36
+  },
+  {
+    "Month": "Mei",
+    "Income": "$71,402.75",
+    "Persentase Naik / Turun": 3.88
+  },
+  {
+    "Month": "Juni",
+    "Income": "$68,230.20",
+    "Persentase Naik / Turun": -4.44
+  },
+  {
+    "Month": "Juli",
+    "Income": "$72,557.90",
+    "Persentase Naik / Turun": 6.34
+  },
+  {
+    "Month": "Agustus",
+    "Income": "$68,278.25",
+    "Persentase Naik / Turun": -5.9
+  },
+  {
+    "Month": "September",
+    "Income": "$64,180.05",
+    "Persentase Naik / Turun": -6
+  },
+  {
+    "Month": "Oktober",
+    "Income": "$64,027.60",
+    "Persentase Naik / Turun": -0.24
+  },
+  {
+    "Month": "November",
+    "Income": "$70,395.35",
+    "Persentase Naik / Turun": 9.95
+  },
+  {
+    "Month": "Desember",
+    "Income": "$64,701.15",
+    "Persentase Naik / Turun": -8.09
+  }
+]
