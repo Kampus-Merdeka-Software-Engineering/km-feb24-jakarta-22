@@ -1,0 +1,27 @@
+{
+    "Small": [
+      { "label": "Chicken Pesto", "value": 298 },
+      { "label": "Thai Chicken", "value": 480 },
+      { "label": "Southwest Chicken", "value": 367 },
+      { "label": "Chicken Alfredo", "value": 96},
+      { "label": "California Chicken", "value": 499 },
+      { "label": "Barbecue Chicken", "value": 484 }
+    ],
+    "Medium": [
+      { "label": "Chicken Pesto", "value": 276 },
+      { "label": "Thai Chicken", "value": 481 },
+      { "label": "Southwest Chicken", "value": 534 },
+      { "label": "Chicken Alfredo", "value": 703},
+      { "label": "California Chicken", "value": 944 },
+      { "label": "Barbecue Chicken", "value": 956 }
+    ],
+    "Large": [
+      { "label": "Chicken Pesto", "value": 399 },
+      { "label": "Thai Chicken", "value": 1410 },
+      { "label": "Southwest Chicken", "value": 1016 },
+      { "label": "Chicken Alfredo", "value": 188},
+      { "label": "California Chicken", "value": 927 },
+      { "label": "Barbecue Chicken", "value": 992 }
+    ]
+  }
+  

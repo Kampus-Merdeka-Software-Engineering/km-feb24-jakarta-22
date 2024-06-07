@@ -1,0 +1,36 @@
+{
+    "Small": [
+      { "label": "Five Cheese", "value": 1409 },
+      { "label": "Mediterranean", "value": 934 },
+      { "label": "Spinach Pesto", "value": 970 },
+      { "label": "Green Garden", "value": 997 },
+      { "label": "Mexicana", "value": 1484 },
+      { "label": "Italian Vegetables", "value": 981 },
+      { "label": "Spinach and Feta", "value": 1446 },
+      { "label": "Four Cheese", "value": 1902 },
+      { "label": "Vegetables + Vegetables", "value": 1526 }
+    ],
+    "Medium": [
+      { "label": "Mediterranean", "value": 275 },
+      { "label": "Spinach Pesto", "value": 282 },
+      { "label": "Green Garden", "value": 302 },
+      { "label": "Mexicana", "value": 455 },
+      { "label": "Italian Vegetables", "value": 486 },
+      { "label": "Spinach and Feta", "value": 562 },
+      { "label": "Four Cheese", "value": 586 },
+      { "label": "Vegetables + Vegetables", "value": 635 }
+      
+    ],
+    "Large": [
+      { "label": "Five Cheese", "value": 1409 },
+      { "label": "Mediterranean", "value": 370 },
+      { "label": "Spinach Pesto", "value": 284 },
+      { "label": "Green Garden", "value": 95 },
+      { "label": "Mexicana", "value": 867 },
+      { "label": "Italian Vegetables", "value": 190 },
+      { "label": "Spinach and Feta", "value": 445 },
+      { "label": "Four Cheese", "value": 1316 },
+      { "label": "Vegetables + Vegetables", "value": 427 } 
+    ]
+  }
+  

@@ -1,0 +1,31 @@
+{
+    "Small": [
+      { "label": "Big Meat", "value": 1914 },
+      { "label": "Greek", "value": 304 },
+      { "label": "Pepperoni, Mushroom, and Peppers", "value": 578 },
+      { "label": "Italian Capocollo", "value": 302 },
+      { "label": "Napolitana", "value": 471},
+      { "label": "Hawaiian", "value": 1020 },
+      { "label": "Pepperoni", "value": 751 },
+      { "label": "Classic Deluxe", "value": 799 }  
+    ],
+    "Medium": [
+      { "label": "Greek", "value": 281 },
+      { "label": "Pepperoni, Mushroom, and Peppers", "value": 397 },
+      { "label": "Italian Capocollo", "value": 404 },
+      { "label": "Napolitana", "value": 427},
+      { "label": "Hawaiian", "value": 483 },
+      { "label": "Pepperoni", "value": 939 },
+      { "label": "Classic Deluxe", "value": 1181 }
+    ],
+    "Large": [
+      { "label": "Greek", "value": 255 },
+      { "label": "Pepperoni, Mushroom, and Peppers", "value": 384 },
+      { "label": "Italian Capocollo", "value": 732 },
+      { "label": "Napolitana", "value": 566},
+      { "label": "Hawaiian", "value": 919 },
+      { "label": "Pepperoni", "value": 728 },
+      { "label": "Classic Deluxe", "value": 473 }
+    ]
+  }
+  

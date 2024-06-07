@@ -1,0 +1,35 @@
+{
+    "Small": [
+      { "label": "Brie Carre", "value": 11588.50 },
+      { "label": "Spinach Supreme", "value": 5000 },
+      { "label": "Soppressata", "value": 3600 },
+      { "label": "Spicy Italian", "value": 5087.50 },
+      { "label": "Pepper Salami", "value": 4025},
+      { "label": "Calabrese", "value": 1212.75 },
+      { "label": "Sicilian", "value": 9199.75 },
+      { "label": "Prosciutto and Arugula", "value": 5300 },
+      { "label": "Italian Supreme", "value": 2450 }
+    ],
+    "Medium": [
+      { "label": "Spinach Supreme", "value": 4405.50 },
+      { "label": "Soppressata", "value": 4422 },
+      { "label": "Spicy Italian", "value": 6732 },
+      { "label": "Pepper Salami", "value": 7062},
+      { "label": "Calabrese", "value": 9132.50 },
+      { "label": "Sicilian", "value": 9327.50 },
+      { "label": "Prosciutto and Arugula", "value": 9867 },
+      { "label": "Italian Supreme", "value": 15526.50 }
+      
+    ],
+    "Large": [
+      { "label": "Spinach Supreme", "value": 5872.25 },
+      { "label": "Soppressata", "value": 8403.75 },
+      { "label": "Spicy Italian", "value": 23011.75 },
+      { "label": "Pepper Salami", "value": 14442},
+      { "label": "Calabrese", "value": 5589 },
+      { "label": "Sicilian", "value": 12413.25 },
+      { "label": "Prosciutto and Arugula", "value": 9026.25 },
+      { "label": "Italian Supreme", "value": 15500.25 }
+    ]
+  }
+  

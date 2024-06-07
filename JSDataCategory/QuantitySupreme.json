@@ -1,0 +1,35 @@
+{
+    "Small": [
+      { "label": "Brie Carre", "value": 490 },
+      { "label": "Spinach Supreme", "value": 400 },
+      { "label": "Soppressata", "value": 288 },
+      { "label": "Spicy Italian", "value": 407 },
+      { "label": "Pepper Salami", "value": 322},
+      { "label": "Calabrese", "value": 99 },
+      { "label": "Sicilian", "value": 751 },
+      { "label": "Prosciutto and Arugula", "value": 424 },
+      { "label": "Italian Supreme", "value": 196 }
+    ],
+    "Medium": [
+      { "label": "Spinach Supreme", "value": 267 },
+      { "label": "Soppressata", "value": 268 },
+      { "label": "Spicy Italian", "value": 408 },
+      { "label": "Pepper Salami", "value": 428},
+      { "label": "Calabrese", "value": 562 },
+      { "label": "Sicilian", "value": 574 },
+      { "label": "Prosciutto and Arugula", "value": 598 },
+      { "label": "Italian Supreme", "value": 941 }
+      
+    ],
+    "Large": [
+      { "label": "Spinach Supreme", "value": 283 },
+      { "label": "Soppressata", "value": 405 },
+      { "label": "Spicy Italian", "value": 1109 },
+      { "label": "Pepper Salami", "value": 696 },
+      { "label": "Calabrese", "value": 276 },
+      { "label": "Sicilian", "value": 613 },
+      { "label": "Prosciutto and Arugula", "value": 435 },
+      { "label": "Italian Supreme", "value": 747 }
+    ]
+  }
+  

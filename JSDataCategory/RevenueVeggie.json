@@ -1,0 +1,36 @@
+{
+    "Small": [
+      { "label": "Five Cheese", "value": 26066.50 },
+      { "label": "Mediterranean", "value": 15360.50 },
+      { "label": "Spinach Pesto", "value": 15596 },
+      { "label": "Green Garden", "value": 13955.75 },
+      { "label": "Mexicana", "value": 26780.75},
+      { "label": "Italian Vegetables", "value": 16019.25 },
+      { "label": "Spinach and Feta", "value": 23271.25 },
+      { "label": "Four Cheese", "value": 32265.70 },
+      { "label": "Vegetables + Vegetables", "value": 24374.75 }
+    ],
+    "Medium": [
+      { "label": "Mediterranean", "value": 4400 },
+      { "label": "Spinach Pesto", "value": 4653 },
+      { "label": "Green Garden", "value": 4832 },
+      { "label": "Mexicana", "value": 7280},
+      { "label": "Italian Vegetables", "value": 8140.50 },
+      { "label": "Spinach and Feta", "value": 8992 },
+      { "label": "Four Cheese", "value": 8643.50 },
+      { "label": "Vegetables + Vegetables", "value": 10160 }
+      
+    ],
+    "Large": [
+      { "label": "Five Cheese", "value": 26066.50 },
+      { "label": "Mediterranean", "value": 7492.50 },
+      { "label": "Spinach Pesto", "value": 5893 },
+      { "label": "Green Garden", "value": 1923.75 },
+      { "label": "Mexicana", "value": 17556.75 },
+      { "label": "Italian Vegetables", "value": 3990 },
+      { "label": "Spinach and Feta", "value": 9011.25 },
+      { "label": "Four Cheese", "value": 23622.20 },
+      { "label": "Vegetables + Vegetables", "value": 8646.75 } 
+    ]
+  }
+  

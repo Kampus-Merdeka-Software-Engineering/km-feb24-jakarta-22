@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Sales Dashboard</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        /*Navbar and Body Styling*/
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-color: #f0f8ff; /* Light background color */
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #f8f9fa;
+            border-bottom: 1px solid #e7e7e7;
+            position: relative;
+            z-index: 1001; /* Ensure the navbar is above the sidebar */
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .navbar-toggler {
+            display: none;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .navbar-toggler-icon {
+            display: inline-block;
+            width: 24px;
+            height: 2px;
+            background-color: #333;
+            position: relative;
+        }
+
+        .navbar-toggler-icon::before,
+        .navbar-toggler-icon::after {
+            content: '';
+            width: 24px;
+            height: 2px;
+            background-color: #333;
+            position: absolute;
+            left: 0;
+        }
+
+        .navbar-toggler-icon::before {
+            top: -8px;
+        }
+
+        .navbar-toggler-icon::after {
+            bottom: -8px;
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .rounded-logo {
+            border-radius: 50%;
+            overflow: hidden;
+            width: 40px;
+            height: 40px;
+            background-color: #f8f9fa; 
+            border: 2px solid #007bff;
+            margin-right: 10px;
+        }
+
+        .rounded-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .logo-text {
+            font-size: 14px;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            color: #061E3B; 
+        }
+
+        .navbar-collapse {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .navbar-nav {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-item {
+            margin-left: 20px;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #007bff;
+        }
+
+        @media (max-width: 768px) {
+            .navbar-toggler {
+                display: block;
+            }
+
+            .navbar-collapse {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: #f8f9fa;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                padding: 10px 20px;
+            }
+
+            .navbar-collapse.open {
+                display: flex;
+            }
+
+            .navbar-nav {
+                flex-direction: column; 
+            }
+
+            .nav-item {
+                margin: 10px 0;
+            }
+
+            .logo-text {
+                display: block;
+                margin-left: 10px;
+            }
+
+            .rounded-logo {
+                margin-right: 10px;
+            }
+        }
+        
+        /*Sidebar Styling*/
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -250px; 
+            width: 250px;
+            height: 100%;
+            background-color: #111;
+            color: white;
+            overflow-x: hidden;
+            transition: 0.5s;
+            z-index: 1000;
+            padding-top: 60px;
+            text-align: center; 
+        }
+
+        .sidebar-content {
+            padding: 15px;
+        }
+
+        .sidebar-toggle {
+            position: fixed;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            background-color: #111;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 1001;
+            transition: 0.5s;
+        }
+
+        .sidebar-toggle.open {
+            left: 250px;
+        }
+
+        .sidebar.open {
+            left: 0;
+        }
+
+        .sidebar-toggle:focus {
+            outline: none;
+        }
+
+        .sidebar img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .sidebar h1 {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #fff;
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            cursor: pointer;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .menu-item a{
+            text-decoration: none;
+            color: white;
+        }
+        .menu-item:hover {
+            background-color: #575757;
+        }
+
+        .menu-item i {
+            margin-right: 10px;
+        }
+
+        .dropdown-container {
+            display: none;
+            padding-left: 20px;
+        }
+
+        .dropdown-container a {
+            display: flex;
+            align-items: center;
+            padding: 5px 0;
+            text-decoration: none;
+            color: white;
+        }
+
+        .dropdown-container a:hover {
+            background-color: #414141;
+        }
+
+        .dropdown-container a i {
+            margin-right: 10px;
+        }
+
+        .menu-item.active + .dropdown-container {
+            display: block;
+        }
+
+        /*Dashboard Chart Styling*/
+        .content {
+            padding: 20px;
+            margin-left: 270px;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -10px;
+        }
+
+        .col-md-6, .col-lg-2, .col-lg-6, .col-lg-3 {
+            padding: 0 10px;
+            box-sizing: border-box;
+        }
+
+        .col-md-6 {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+
+        .col-lg-2 {
+            flex: 0 0 16.666667%;
+            max-width: 16.666667%;
+        }
+
+        .col-lg-3 {
+            flex: 0 0 25%;
+            max-width: 25%;
+        }
+
+        .col-lg-6 {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+
+        .mb-4 {
+            margin-bottom: 1.5rem;
+        }
+
+        .chart-container {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+
+        .chart-container h6 {
+            margin-bottom: 10px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .chart-container h3 {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .chart-container canvas {
+            width: 100%;
+            height: 200px;
+        }
+
+        .chart-filter {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 40px;
+            right: 10px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+        }
+
+        .dropdown a {
+            display: block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #333;
+            border-bottom: 1px solid #eee;
+            transition: background-color 0.3s;
+        }
+
+        .dropdown a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown a:last-child {
+            border-bottom: none;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+            margin-left: 0;
+            padding: 50px;
+            }
+
+            .chart-container {
+                margin-bottom: 20px;
+            }
+
+            .col-md-6 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+
+            .col-md-6.col-lg-2 {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+
+            .col-lg-2,
+            .col-lg-3,
+            .col-lg-6 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <div class="rounded-logo">
+                    <img src="../img_source/RevoU.jpg" alt="Company Logo">
+                </div>
+                <div class="logo-text">REVOU-22 SALES DASHBOARD</div>
+            </a>
+            <button class="navbar-toggler" id="navbarToggler">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../ComplePages/index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../ComplePages/about-us.html">ABOUT US</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-content">
+            <img src="../img_source/RevoU.jpg" alt="Dashboard Logo">
+            <h1>Pizza Sales Dashboard</h1>
+            <div class="menu-item">
+                <a href="dashboard.html"><i class="fa fa-bullseye"></i>Dashboard</a>
+            </div>
+            <div class="menu-item" id="categoryDashboard">
+                <i class="fa fa-bar-chart"></i>Category Dashboard
+            </div>
+            <div class="dropdown-container" id="categoryDropdown">
+                <a href="category_dashboard_1.html"><i class="fa fa-circle"></i>Category 1</a>
+                <a href="category_dashboard_2.html"><i class="fa fa-circle"></i>Category 2</a>
+                <a href="category_dashboard_3.html"><i class="fa fa-circle"></i>Category 3</a>
+            </div>
+            <div class="menu-item">
+                <i class="fa fa-table"></i><a href="sales_table.html">Sales Table</a>
+            </div>
+        </div>
+    </div>
+    <button class="sidebar-toggle" id="sidebarToggle">→</button>
+    
+    <div class="content">
+        <div class="row">
+            <div class="col-md-6 col-lg-2 mb-4">
+                <div class="chart-container">
+                    <h6>TOTAL REVENUE</h6>
+                    <h3>$816.853,45</h3>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-2 mb-4">
+                <div class="chart-container">
+                    <h6>TOTAL QUANTITY</h6>
+                    <h3>49.546</h3>    
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-2 mb-4">
+                <div class="chart-container">
+                    <h6>TOTAL PIZZA MENU</h6>
+                    <h3>96</h3> 
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-2 mb-4">
+                <div class="chart-container">
+                    <h6>TOTAL PIZZA VARIANCE</h6>
+                    <h3>32</h3>   
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-2 mb-4">
+                <div class="chart-container">
+                    <h6>TOTAL PIZZA CATEGORY</h6>
+                    <h3>4</h3>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-2 mb-4">
+                <div class="chart-container">
+                    <h6>AVERAGE PRICE</h6>
+                    <h3>$16,48</h3>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 mb-4">
+                <div class="chart-container">
+                    <h5>Monthly Revenue</h5>
+                    <span class="chart-filter" onclick="toggleDropdown('dropdown1')">&#9660;</span>
+                    <div class="dropdown" id="dropdown1">
+                        <a href="#" onclick="updateChart('chart1', 'monthly')">Monthly Revenue</a>
+                        <a href="#" onclick="updateChart('chart1', 'daily')">Daily Revenue</a>
+                        <a href="#" onclick="updateChart('chart1', 'yearly')">Yearly Revenue</a>
+                    </div>
+                    <canvas id="chart1"></canvas>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 mb-4">
+                <div class="chart-container">
+                    <h5>Monthly Sales Quantity</h5>
+                    <span class="chart-filter" onclick="toggleDropdown('dropdown2')">&#9660;</span>
+                    <div class="dropdown" id="dropdown2">
+                        <a href="#" onclick="updateChart('chart2', 'monthly')">Monthly Sales Quantity</a>
+                        <a href="#" onclick="updateChart('chart2', 'daily')">Daily Sales Quantity</a>
+                        <a href="#" onclick="updateChart('chart2', 'yearly')">Yearly Sales Quantity</a>
+                    </div>
+                    <canvas id="chart2"></canvas>
+                </div>
+            </div>
+    </div>
+    <script>
+        // Handle sidebar toggle
+        document.getElementById('sidebarToggle').addEventListener('click', function () {
+            var sidebar = document.getElementById('sidebar');
+            var sidebarToggle = document.getElementById('sidebarToggle');
+            sidebar.classList.toggle('open');
+            sidebarToggle.classList.toggle('open');
+            if (sidebar.classList.contains('open')) {
+                sidebarToggle.innerHTML = '←';
+            } else {
+                sidebarToggle.innerHTML = '→';
+            }
+        });
+
+        // Handle navbar toggle
+        document.getElementById('navbarToggler').addEventListener('click', function () {
+            var navbarSupportedContent = document.getElementById('navbarSupportedContent');
+            navbarSupportedContent.classList.toggle('open');
+        });
+
+       // Handle category dropdown
+        document.getElementById('categoryDashboard').addEventListener('click', function () {
+            var categoryDashboard = document.getElementById('categoryDashboard');
+            categoryDashboard.classList.toggle('active');
+        });
+
+        // Dummy data for charts
+        var dummyData = {
+            monthly: [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120],
+            daily: [5, 15, 25, 35, 45, 55, 65, 75, 85, 95, 105, 115],
+            yearly: [120, 110, 100, 90, 80, 70, 60, 50, 40, 30, 20, 10],
+            hourly: [1, 3, 2, 4, 6, 5, 7, 8, 6, 5, 3, 2, 1, 4, 5, 6, 8, 7, 6, 5, 4, 3, 2, 1]
+        };
+
+        function createChart(chartId, data, label) {
+            var ctx = document.getElementById(chartId).getContext('2d');
+            var chart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: label === 'hourly' ? Array.from({ length: 24 }, (_, i) => `${i}:00`) : Array.from({ length: 12 }, (_, i) => `Month ${i + 1}`),
+                    datasets: [{
+                        label: 'Data',
+                        data: data[label],
+                        backgroundColor: 'rgba(0, 123, 255, 0.5)',
+                        borderColor: 'rgba(0, 123, 255, 1)',
+                        borderWidth: 1,
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+            return chart;
+        }
+
+        // Initial chart creation
+        var charts = {
+            chart1: createChart('chart1', dummyData, 'monthly'),
+            chart2: createChart('chart2', dummyData, 'monthly'),
+        };
+
+        // Handle chart updates
+        function updateChart(chartId, type) {
+            charts[chartId].data.labels = type === 'hourly' ? Array.from({ length: 24 }, (_, i) => `${i}:00`) : Array.from({ length: 12 }, (_, i) => `Month ${i + 1}`);
+            charts[chartId].data.datasets[0].data = dummyData[type];
+            charts[chartId].update();
+        }
+
+        // Toggle dropdown visibility
+        function toggleDropdown(dropdownId) {
+            var dropdown = document.getElementById(dropdownId);
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>

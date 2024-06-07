@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #2e2b29;
+    color: white;
+    padding: 1rem 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    background-color: #cc9138;
+    color: #333;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+.hero .description {
+    margin: 20px 0;
+    font-size: 1.2rem;
+}
+
+.hero button {
+    background-color: #a09088;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hero button:hover {
+    background-color: #756965;
+}
+
+.promo, #about, #contact {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.promo h2, #about h2, #contact h2 {
+    margin-bottom: 30px;
+}
+
+.promo .menu-item {
+    background-color: #333230;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
+}
+
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+
+    header h1 {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .hero {
+        padding: 30px 10px;
+    }
+
+    .hero .description {
+        font-size: 1rem;
+    }
+
+    .hero button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .promo .menu-item {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header .container {
+        padding: 0 10px;
+    }
+
+    .hero {
+        padding: 20px 10px;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero .description {
+        font-size: 0.9rem;
+    }
+
+    .hero button {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+
+    .promo h2, #about h2, #contact h2 {
+        font-size: 1.5rem;
+    }
+
+    .promo .menu-item {
+        padding: 15px;
+        font-size: 0.8rem;
+    }
+}
