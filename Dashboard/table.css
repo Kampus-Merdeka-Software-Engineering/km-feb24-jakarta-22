@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background-color: #f0f8ff; /* Light background color */
+    background-color: #f0f8ff; 
 }
 
 .navbar {
@@ -15,7 +15,8 @@ body {
     background-color: #f8f9fa;
     border-bottom: 1px solid #e7e7e7;
     position: relative;
-    z-index: 1001; /* Ensure the navbar is above the sidebar */
+    z-index: 1001;
+    background-color: #E74C3C;
 }
 
 .container {
@@ -86,7 +87,7 @@ body {
     font-size: 14px;
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
-    color: #061E3B; 
+    color: #FFFFFF; 
 }
 
 .navbar-collapse {
@@ -107,9 +108,10 @@ body {
 
 .nav-link {
     text-decoration: none;
-    color: #333;
+    color: #eceaea;
     font-size: 16px;
     transition: color 0.3s;
+    font-weight: bold;
 }
 
 .nav-link:hover {
@@ -125,7 +127,7 @@ body {
         display: none;
         flex-direction: column;
         width: 100%;
-        background-color: #f8f9fa;
+        background-color: #2C3E50;
         position: absolute;
         top: 60px;
         left: 0;
@@ -181,11 +183,28 @@ body {
     transform: translateY(-50%);
     background-color: #111;
     color: white;
-    border: none;
+    border: solid 2px white;
+    border-radius: 5px;
     padding: 10px;
     cursor: pointer;
     z-index: 1001;
     transition: 0.5s;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-toggle .hover-text {
+    display: none;
+    margin-left: 10px;
+    color: white;
+    font-size: 14px;
+    transition: opacity 0.3s;
+    opacity: 0;
+}
+
+.sidebar-toggle:hover .hover-text {
+    display: block;
+    opacity: 1;
 }
 
 .sidebar-toggle.open {
@@ -198,6 +217,12 @@ body {
 
 .sidebar-toggle:focus {
     outline: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .sidebar-toggle:hover .hover-text {
+        display: none;
+    }
 }
 
 .sidebar img {
@@ -268,7 +293,7 @@ body {
     width: 90%;
     transition: margin-left 0.5s;
     overflow-x: auto;
-    padding: 10px; 
+    padding: 15px; 
 }
 
 .table-container.table-move {
@@ -294,4 +319,89 @@ th {
     .table-container {
         width: 100%;
     }
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .container {
+    max-width: 1200px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* DataTables Styling */
+.dataTables_wrapper {
+    margin: 20px 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.dataTables_length {
+    margin-bottom: 20px;
+}
+
+.dataTables_filter {
+    margin-bottom: 20px;
+}
+
+.dataTables_info {
+    margin-top: 20px;
+}
+
+.dataTables_paginate {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Optional: Customize pagination buttons */
+.dataTables_paginate .paginate_button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    color: #333;
+    text-decoration: none;
+}
+
+.dataTables_paginate .paginate_button:hover {
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #007bff;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s forwards;
+}
+
+.fade-out {
+    animation: fadeOut 1s forwards;
 }

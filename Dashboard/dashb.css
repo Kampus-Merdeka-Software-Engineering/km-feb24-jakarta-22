@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background-color: #f0f8ff; /* Light background color */
+    background-color: #f0f8ff; 
 }
 
 .navbar {
@@ -15,7 +15,8 @@ body {
     background-color: #f8f9fa;
     border-bottom: 1px solid #e7e7e7;
     position: relative;
-    z-index: 1001; /* Ensure the navbar is above the sidebar */
+    z-index: 1001;
+    background-color: #E74C3C; 
 }
 
 .container {
@@ -86,7 +87,7 @@ body {
     font-size: 14px;
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
-    color: #061E3B; 
+    color: #FFFFFF; 
 }
 
 .navbar-collapse {
@@ -107,9 +108,10 @@ body {
 
 .nav-link {
     text-decoration: none;
-    color: #333;
+    color: #FFFFFF;
     font-size: 16px;
     transition: color 0.3s;
+    font-weight: bold;
 }
 
 .nav-link:hover {
@@ -125,7 +127,7 @@ body {
         display: none;
         flex-direction: column;
         width: 100%;
-        background-color: #f8f9fa;
+        background-color: #2C3E50;
         position: absolute;
         top: 60px;
         left: 0;
@@ -181,11 +183,28 @@ body {
     transform: translateY(-50%);
     background-color: #111;
     color: white;
-    border: none;
+    border: solid 2px white;
+    border-radius: 5px;
     padding: 10px;
     cursor: pointer;
     z-index: 1001;
     transition: 0.5s;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-toggle .hover-text {
+    display: none;
+    margin-left: 10px;
+    color: white;
+    font-size: 14px;
+    transition: opacity 0.3s;
+    opacity: 0;
+}
+
+.sidebar-toggle:hover .hover-text {
+    display: block;
+    opacity: 1;
 }
 
 .sidebar-toggle.open {
@@ -198,6 +217,12 @@ body {
 
 .sidebar-toggle:focus {
     outline: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .sidebar-toggle:hover .hover-text {
+        display: none;
+    }
 }
 
 .sidebar img {
@@ -256,6 +281,42 @@ body {
 
 .menu-item.active + .dropdown-container {
     display: block;
+}
+
+/*Title Styling*/
+.title-container{
+    position: relative;
+    margin-left: 270px;
+}
+.title-container h3{
+    padding: 20px;
+    margin-bottom: -60px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Montserrat;
+}
+.title-container h6{
+    padding: 20px;
+    margin-bottom: -20px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Montserrat;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .title-container {
+        text-align: center;
+        margin-left: 0px; 
+    }
+
+    .title-container h3 {
+        font-size: 18px; 
+    }
+
+    .title-container h6 {
+        font-size: smaller; 
+    }
 }
 
 /*Dashboard Chart Styling*/
@@ -390,4 +451,48 @@ body {
         flex: 0 0 100%;
         max-width: 100%;
     }
+}
+
+/*Footer Styling*/
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .container {
+    max-width: 1200px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s forwards;
+}
+
+.fade-out {
+    animation: fadeOut 1s forwards;
 }

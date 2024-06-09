@@ -1,57 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pizza Paradise</title>
+    <title>Homepage</title>
     <link rel="stylesheet" href="indexstyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
+
 <body>
     <header>
-        <div class="container">
-            <h1>REVOU-22 SALES DASHBOARD</h1>
-            <nav>
-                <ul>
-                    <li><a href="Dashboard/Dashboard.html">DASHBOARD</a></li>
-                    <li><a href="about-us.html">ABOUT US</a></li>
-                </ul>
-            </nav>
-        </div>
+        <nav class="navbar">
+            <div class="container">
+                <a class="navbar-brand">
+                    <div class="rounded-logo">
+                        <img src="../img_source/RevoU.jpg" alt="Company Logo">
+                    </div>
+                    <div class="logo-text">REVOU-22 SALES DASHBOARD</div>
+                </a>
+                <button class="navbar-toggler" id="navbarToggler">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="Dashboard/Dashboard.html">DASHBOARD</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about-us.html">OUR TEAM</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
     <main>
-        <section id="home" class="hero">
-            <h2>Welcome to Pizza Paradise</h2>
-            <p>Your favorite place for delicious pizzas</p>
-            <img src="img_source/pizza.jpg" alt="Delicious Pizza">
-            <div class="description">
-                <p>At Pizza Paradise, we take pride in serving the best pizzas made with fresh ingredients and traditional recipes. Our commitment to quality and taste sets us apart from the rest.</p>
+        <section id="home" class="hero" data-aos="fade-up" data-aos-duration="1500">
+            <h2><span>Welcome</span> To The Official Dashboard Page</h2>
+            <p>Final Product of Software Engineering Path</p>
+            <img src="img_source/home.png" alt="Delicious Pizza" data-aos="fade-up" data-aos-duration="1500">
+            <div class="description" data-aos="fade-up" data-aos-duration="1500">
+                <p>This website contains information about the performance sales of an unnamed Pizza Parlor
+                   using "The Three Musketeers" of website, which are HTML,CSS,and Javascript. 
+                   Simply click "Go To Dashboard" button to be directed to the main pages of this website.</p>
             </div>
-            <button onclick = "Dashboard/Dashboard.html">Go To Dashboard</button>
-        </section>
-        <section id="menu" class="promo">
-            <h2>Our Menu</h2>
-            <div class="menu-item">
-                <h3>Barbecue Chicken Pizza</h3>
-                <p>Barbecued Chicken, Red Peppers, Green Peppers, Tomatoes, Red Onions, Barbecue Sauce.</p>
-            </div>
-            <div class="menu-item">
-                <h3>California Chicken Pizza</h3>
-                <p>Chicken, Artichoke, Spinach, Garlic, Jalapeno Peppers, Fontina Cheese, Gouda Cheese.</p>
-            </div>
-            <div class="menu-item">
-                <h3>Chicken Alfredo Pizza</h3>
-                <p>Chicken, Red Onions, Red Peppers, Mushrooms, Asiago Cheese, Alfredo Sauce.</p>
-            </div>
-        </section>
-        <section id="about">
-            <h2>About Us</h2>
-            <p>Pizza Paradise was established in 2020 with a mission to serve the best pizzas in town. We believe in quality and customer satisfaction.</p>
-        </section>
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>Email: contact@pizzaparadise.com</p>
-            <p>Phone: (123) 456-7890</p>
-            <p>Address: 123 Pizza Street, Food City, FC 12345</p>
+            <button onclick="redirectToDashboard()" data-aos="fade-up" data-aos-duration="1500">Go To Dashboard</button> 
         </section>
     </main>
     <footer>
@@ -60,5 +55,10 @@
         </div>
     </footer>
     <script src="Home.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
+
 </html>

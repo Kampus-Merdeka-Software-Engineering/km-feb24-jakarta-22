@@ -12,117 +12,136 @@
     <link rel="stylesheet" href="../Dashboard/dashb.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <div class="rounded-logo">
-                    <img src="../img_source/RevoU.jpg" alt="Company Logo">
-                </div>
-                <div class="logo-text">REVOU-22 SALES DASHBOARD</div>
-            </a>
-            <button class="navbar-toggler" id="navbarToggler">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html">HOME</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../about-us.html">ABOUT US</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <div class="sidebar" id="sidebar">
-        <div class="sidebar-content">
-            <img src="../img_source/RevoU.jpg" alt="Dashboard Logo">
-            <h1>Pizza Sales Dashboard</h1>
-            <div class="menu-item">
-                <a href="../Dashboard/Dashboard.html"><i class="fa fa-bullseye"></i>Dashboard</a>
-            </div>
-            <div class="menu-item" id="categoryDashboard">
-                <i class="fa fa-bar-chart"></i>Category Dashboard
-            </div>
-            <div class="dropdown-container" id="categoryDropdown">
-                <a href="../Category/Chicken.html"><i class="fa fa-circle"></i>Chicken Category</a>
-                <a href="../Category/Classic.html"><i class="fa fa-circle"></i>Classic Category</a>
-                <a href="../Category/Supreme.html"><i class="fa fa-circle"></i>Supreme Category</a>
-                <a href="../Category/Veggie.html"><i class="fa fa-circle"></i>Veggie Category</a>
-            </div>
-            <div class="menu-item">
-                <i class="fa fa-table"></i><a href="../Dashboard/TableView.html">Sales Table</a>
-            </div>
-        </div>
-    </div>
-    <button class="sidebar-toggle" id="sidebarToggle">→</button>
-    
-    <div class="content">
-        <div class="row">
-            <div class="col-md-6 col-lg-2 mb-4">
-                <div class="chart-container">
-                    <h6>TOTAL PIZZA REVENUE</h6>
-                    <h3>$816.853,45</h3>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-2 mb-4">
-                <div class="chart-container">
-                    <h6>TOTAL QUANTITY</h6>
-                    <h3>49.546</h3>    
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-2 mb-4">
-                <div class="chart-container">
-                    <h6>TOTAL PIZZA MENU</h6>
-                    <h3>96</h3> 
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-2 mb-4">
-                <div class="chart-container">
-                    <h6>TOTAL PIZZA VARIANCE</h6>
-                    <h3>32</h3>   
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-2 mb-4">
-                <div class="chart-container">
-                    <h6>TOTAL PIZZA CATEGORY</h6>
-                    <h3>4</h3>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-2 mb-4">
-                <div class="chart-container">
-                    <h6>AVERAGE PIZZA PRICE</h6>
-                    <h3>$16,48</h3>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-6 mb-4">
-                <div class="chart-container">
-                    <h5>Total Revenue</h5>
-                    <span class="chart-filter" onclick="toggleDropdown('dropdown1')">&#9660;</span>
-                    <div class="dropdown" id="dropdown1">
-                        <a href="#" onclick="updateChart('chart1', 'Small', 'data1')">Small Size Sales</a>
-                        <a href="#" onclick="updateChart('chart1', 'Medium', 'data1')">Medium Size Sales</a>
-                        <a href="#" onclick="updateChart('chart1', 'Large', 'data1')">Large Size Revenue</a>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <div class="rounded-logo">
+                        <img src="../img_source/RevoU.jpg" alt="Company Logo">
                     </div>
-                    <canvas id="chart1"></canvas>
+                    <div class="logo-text">REVOU-22 SALES DASHBOARD</div>
+                </a>
+                <button class="navbar-toggler" id="navbarToggler">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">HOMEPAGE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../about-us.html">OUR TEAM</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-6 mb-4">
-                <div class="chart-container">
-                  <h5>Total Quantity Sold</h5>
-                  <span class="chart-filter" onclick="toggleDropdown('dropdown2')">&#9660;</span>
-                  <div class="dropdown" id="dropdown2">
-                    <a href="#" onclick="updateChart('chart2', 'Small', 'data2')">Small Size Sales</a>
-                    <a href="#" onclick="updateChart('chart2', 'Medium', 'data2')">Medium Size Sales</a>
-                    <a href="#" onclick="updateChart('chart2', 'Large', 'data2')">Large Size Revenue</a>
-                  </div>
-                  <canvas id="chart2"></canvas>
+        </nav>
+    </header>
+    <main>
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-content">
+                <img src="../img_source/RevoU.jpg" alt="Dashboard Logo">
+                <h1>Pizza Sales Dashboard</h1>
+                <div class="menu-item">
+                    <a href="../Dashboard/Dashboard.html"><i class="fa fa-bullseye"></i>Dashboard</a>
+                </div>
+                <div class="menu-item" id="categoryDashboard">
+                    <i class="fa fa-bar-chart"></i>Category Dashboard
+                </div>
+                <div class="dropdown-container" id="categoryDropdown">
+                    <a href="../Category/Chicken.html"><i class="fa fa-circle-o"></i>Chicken Pizza Sales</a>
+                    <a href="../Category/Classic.html"><i class="fa fa-circle-o"></i>Classic Pizza Sales</a>
+                    <a href="../Category/Supreme.html"><i class="fa fa-circle-o"></i>Supreme Pizza Sales</a>
+                    <a href="../Category/Veggie.html"><i class="fa fa-circle-o"></i>Veggie Pizza Sales</a>
+                </div>
+                <div class="menu-item">
+                    <i class="fa fa-table"></i><a href="../Dashboard/TableView.html">Sales Table</a>
                 </div>
             </div>
         </div>
-    </div>
+        <button class="sidebar-toggle" id="sidebarToggle">
+            <span>☰</span>
+        </button>
+        
+        <div class = title-container>
+            <h3>Veggie Pizza Dasboard</h3>
+            <h6>Based on <a href="https://docs.google.com/spreadsheets/d/1tBXzWuQu0PGJV9pN-O3Z7oUVotuz7y9J3CIvKWB0Rg8/edit?usp=sharing" target="_blank">Spreadsheet</a></h6>
+        </div>
+
+        <div class="content">
+            <div class="row">
+                <div class="col-md-6 col-lg-2 mb-4" data-aos="fade-up" data-aos-duration="1500">
+                    <div class="chart-container">
+                        <h6>TOTAL PIZZA REVENUE</h6>
+                        <h3>$122.710,70</h3>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-2 mb-4" data-aos="fade-up" data-aos-duration="1500">
+                    <div class="chart-container">
+                        <h6>TOTAL QUANTITY</h6>
+                        <h3>7.339</h3>    
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-2 mb-4" data-aos="fade-up" data-aos-duration="1500">
+                    <div class="chart-container">
+                        <h6>TOTAL PIZZA MENU</h6>
+                        <h3>15</h3> 
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-2 mb-4" data-aos="fade-up" data-aos-duration="1500">
+                    <div class="chart-container">
+                        <h6>TOTAL PIZZA VARIANCE</h6>
+                        <h3>5</h3>   
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-2 mb-4" data-aos="fade-up" data-aos-duration="1500">
+                    <div class="chart-container">
+                        <h6>AVAILABLE PIZZA SALES</h6>
+                        <h3>S,M,L</h3>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-2 mb-4" data-aos="fade-up" data-aos-duration="1500">
+                    <div class="chart-container">
+                        <h6>AVERAGE PIZZA PRICE</h6>
+                        <h3>$16,02</h3>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 mb-4" data-aos="slide-right" data-aos-duration="1500">
+                    <div class="chart-container">
+                        <h5>Total Revenue</h5>
+                        <span class="chart-filter" onclick="toggleDropdown('dropdown1')">&#9660;</span>
+                        <div class="dropdown" id="dropdown1">
+                            <a href="#" onclick="updateChart('chart1', 'Small', 'data1')">Small Size Revenue</a>
+                            <a href="#" onclick="updateChart('chart1', 'Medium', 'data1')">Medium Size Revenue</a>
+                            <a href="#" onclick="updateChart('chart1', 'Large', 'data1')">Large Size Revenue</a>
+                        </div>
+                        <canvas id="chart1"></canvas>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 mb-4" data-aos="slide-right" data-aos-duration="1500">
+                    <div class="chart-container">
+                      <h5>Total Quantity Sold</h5>
+                      <span class="chart-filter" onclick="toggleDropdown('dropdown2')">&#9660;</span>
+                      <div class="dropdown" id="dropdown2">
+                        <a href="#" onclick="updateChart('chart2', 'Small', 'data2')">Small Size Quantity Sales</a>
+                        <a href="#" onclick="updateChart('chart2', 'Medium', 'data2')">Medium Size Quantity Sales</a>
+                        <a href="#" onclick="updateChart('chart2', 'Large', 'data2')">Large Size Quantity Sales</a>
+                      </div>
+                      <canvas id="chart2"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Team-22 Revou. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="../JSDataCategory/Veggie.js"></script>
 </body>
 </html>

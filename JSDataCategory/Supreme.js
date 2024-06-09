@@ -1,4 +1,34 @@
-document.addEventListener('DOMContentLoaded', initializeCharts);
+// Footer Sentences Animations
+document.addEventListener('DOMContentLoaded', () => {
+    const sentences = [
+      "&copy; 2024 Team-22 Revou. All Rights Reserved.",
+      "Those Who Seek, They Shall Receive",
+      "A Hero Need Not Speak. When He Is Gone, The World Will Speak For Him - Master Chief",
+      "You Can Take My Name, But You Never Have My Heart - Skyfall",
+      "We Will Stand Tall And Face It All Together - Skyfall"
+  ];
+  
+    let currentSentenceIndex = 0;
+    const footerParagraph = document.querySelector('footer .container p');
+  
+    function changeSentence() {
+        footerParagraph.classList.add('fade-out');
+  
+        setTimeout(() => {
+            currentSentenceIndex = (currentSentenceIndex + 1) % sentences.length;
+            footerParagraph.innerHTML = sentences[currentSentenceIndex];
+  
+            footerParagraph.classList.remove('fade-out');
+            footerParagraph.classList.add('fade-in');
+  
+            setTimeout(() => {
+                footerParagraph.classList.remove('fade-in');
+            }, 1000);
+        }, 1000); 
+    }
+  
+    setInterval(changeSentence, 5000); 
+  });
 
 // Sidebar Toggle Interactivity
 document.getElementById('sidebarToggle').addEventListener('click', function () {
@@ -7,11 +37,11 @@ document.getElementById('sidebarToggle').addEventListener('click', function () {
     sidebar.classList.toggle('open');
     sidebarToggle.classList.toggle('open');
     if (sidebar.classList.contains('open')) {
-        sidebarToggle.innerHTML = '←';
+        sidebarToggle.querySelector('span').innerHTML = '<';
     } else {
-        sidebarToggle.innerHTML = '→';
+        sidebarToggle.querySelector('span').innerHTML = '☰';
     }
-});
+  });
 
 // Navbar Toggle Interactivity
 document.getElementById('navbarToggler').addEventListener('click', function () {
@@ -67,13 +97,13 @@ async function initializeCharts() {
     
     const ctx1 = document.getElementById('chart1').getContext('2d');
     myChart1 = new Chart(ctx1, {
-        type: 'line',
+        type: 'bar',
         data: {
             labels: [],
             datasets: [{
                 label: 'Total Revenue',
                 data: [],
-                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                backgroundColor: 'rgba(16, 47, 84, 1)',
                 borderColor: 'rgba(75, 192, 192, 1)',
                 borderWidth: 1
             }]
@@ -95,8 +125,8 @@ async function initializeCharts() {
             datasets: [{
                 label: 'Total Quantity Sold',
                 data: [],
-                backgroundColor: 'rgba(153, 102, 255, 0.2)',
-                borderColor: 'rgba(153, 102, 255, 1)',
+                backgroundColor: 'rgba(16, 47, 84, 1)',
+                borderColor: 'rgba(75, 192, 192, 1)',
                 borderWidth: 1
             }]
         },
@@ -128,3 +158,5 @@ function toggleDropdown(dropdownId) {
     const dropdown = document.getElementById(dropdownId);
     dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
 }
+
+document.addEventListener('DOMContentLoaded', initializeCharts);

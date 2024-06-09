@@ -1,15 +1,45 @@
-* {
+body {
+    font-family: 'Montserrat';
     margin: 0;
     padding: 0;
-    box-sizing: border-box;   
+    overflow-x: hidden;
+    background-color: #fdfdfd;
 }
-
-body {
+.title-about{
+    text-align: center;
+    margin-top: 20px;
+    color: #2C3E50;
+}
+.team-container {
     display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+.team-member {
+    background-color: #F1C40F;
+    width: 200px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.team-member img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+.team-member h3 {
+    margin: 10px 0 5px;
+}
+.team-member p {
+    margin: 0;
+    color: #555;
 }
 
+/*Navbar Styling*/
 .navbar {
     display: flex;
     align-items: center;
@@ -85,7 +115,6 @@ body {
 }
 
 .logo-text {
-    font-family: Montserrat;
     font-size: 14px;
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
@@ -109,7 +138,6 @@ body {
 }
 
 .nav-link {
-    font-family: Montserrat;
     text-decoration: none;
     color: #FFFFFF;
     font-size: 16px;
@@ -121,63 +149,7 @@ body {
     color: #007bff;
 }
 
-/* CSS Bagian Home */
-.hero {
-    padding: 90px 15% 80px;
-    text-align: center;
-    background-color: #fffbf6;
-    color: #302e29;
-}
-
-.hero h2 {
-    font-size: 4.5rem;
-    margin-bottom: 20px;
-}
-
-.hero h2 span {
-    color: #ff9100;
-}
-
-.hero p {
-    font-size: 1.1rem;
-    color: #858585;
-    margin-bottom: 30px;
-}
-
-.hero img {
-    max-width: 50%;
-    height: auto;
-    margin-bottom: 30px;
-}
-
-.hero .description {
-    margin-bottom: 30px;
-}
-
-.hero .description p {
-    font-size: 1.1rem;
-    color: #858585;
-    line-height: 1.6;
-    margin-bottom: 30px;
-}
-
-.hero button {
-    padding: 14px 26px;
-    background-color: #ff9100;
-    color: #fff;
-    font-size: 15px;
-    font-weight: 600;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.hero button:hover {
-    background-color: #27AE60;
-}
-
-/* Footer CSS */
+/* Footer Styling */
 footer {
     background-color: #333;
     color: white;
@@ -188,9 +160,8 @@ footer {
 }
 
 footer .container {
-    font-family: Montserrat;
     max-width: 1200px;
-    padding: 20px;
+    padding: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -220,57 +191,6 @@ footer .container {
 
 .fade-out {
     animation: fadeOut 1s forwards;
-}
-
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .hero {
-        padding: 30px 10px;
-    }
-
-    .hero .description {
-        font-size: 1rem;
-    }
-
-    .hero button {
-        padding: 10px 20px;
-        font-size: 0.9rem;
-    }
-
-    .promo .menu-item {
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero {
-        padding: 20px 10px;
-    }
-
-    .hero h2 {
-        font-size: 1.5rem;
-    }
-
-    .hero .description {
-        font-size: 0.9rem;
-    }
-
-    .hero button {
-        padding: 8px 16px;
-        font-size: 0.8rem;
-    }
-
-    .promo h2,
-    #about h2,
-    #contact h2 {
-        font-size: 1.5rem;
-    }
-
-    .promo .menu-item {
-        padding: 15px;
-        font-size: 0.8rem;
-    }
 }
 
 /*Responsive Navbar Setting*/
