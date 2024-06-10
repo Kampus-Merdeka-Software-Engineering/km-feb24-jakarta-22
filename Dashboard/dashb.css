@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background-color: #f0f8ff; 
+    background-color: rgb(224, 217, 217);
 }
 
 .navbar {
@@ -12,11 +12,10 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    background-color: #f8f9fa;
+    background-color: #101314;
     border-bottom: 1px solid #e7e7e7;
     position: relative;
-    z-index: 1001;
-    background-color: #E74C3C; 
+    z-index: 1001; 
 }
 
 .container {
@@ -38,8 +37,9 @@ body {
     display: inline-block;
     width: 24px;
     height: 2px;
-    background-color: #333;
+    background-color: #DDDBCB;
     position: relative;
+    margin-bottom: 4px;
 }
 
 .navbar-toggler-icon::before,
@@ -47,7 +47,7 @@ body {
     content: '';
     width: 24px;
     height: 2px;
-    background-color: #333;
+    background-color: #008080;
     position: absolute;
     left: 0;
 }
@@ -147,8 +147,7 @@ body {
     }
 
     .logo-text {
-        display: block;
-        margin-left: 10px;
+        display: none;
     }
 
     .rounded-logo {
@@ -286,14 +285,16 @@ body {
 /*Title Styling*/
 .title-container{
     position: relative;
-    margin-left: 270px;
+    margin-left: 50px;
+    transition: margin-left 0.5s;
 }
 .title-container h3{
     padding: 20px;
     margin-bottom: -60px;
-    font-size: 20px;
+    font-size: 35px;
     font-weight: bold;
     font-family: Montserrat;
+    margin-top: 0px;
 }
 .title-container h6{
     padding: 20px;
@@ -322,7 +323,8 @@ body {
 /*Dashboard Chart Styling*/
 .content {
     padding: 20px;
-    margin-left: 270px;
+    margin-left: 50px;
+    transition: margin-left 0.5s; /* Smooth transition for margin change */
 }
 
 .row {
@@ -362,8 +364,8 @@ body {
 
 .chart-container {
     background-color: #fff;
-    padding: 10px;
-    border-radius: 10px;
+    padding: 20px;
+    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     text-align: center;
     display: flex;
@@ -425,10 +427,11 @@ body {
     border-bottom: none;
 }
 
+/*Responsive Container Chart Mode*/
 @media (max-width: 768px) {
     .content {
-    margin-left: 0;
-    padding: 50px;
+        margin-left: 0;
+        padding: 50px;
     }
 
     .chart-container {

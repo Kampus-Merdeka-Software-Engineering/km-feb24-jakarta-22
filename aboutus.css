@@ -3,12 +3,16 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background-color: #fdfdfd;
+    background-color: rgb(224, 217, 217);
 }
+
 .title-about{
     text-align: center;
     margin-top: 20px;
     color: #2C3E50;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 0px;
 }
 .team-container {
     display: flex;
@@ -18,7 +22,7 @@ body {
     padding: 20px;
 }
 .team-member {
-    background-color: #F1C40F;
+    background-color: #36454F;
     width: 200px;
     text-align: center;
     border-radius: 10px;
@@ -36,7 +40,7 @@ body {
 }
 .team-member p {
     margin: 0;
-    color: #555;
+    color: #FFFFFA;
 }
 
 /*Navbar Styling*/
@@ -45,7 +49,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    background-color: #E74C3C;
+    background-color: #101314;
     position: relative;
     z-index: 1001; 
 }
@@ -69,8 +73,9 @@ body {
     display: inline-block;
     width: 24px;
     height: 2px;
-    background-color: #fdeaea;
+    background-color: #DDDBCB;
     position: relative;
+    margin-bottom: 4px;
 }
 
 .navbar-toggler-icon::before,
@@ -78,7 +83,7 @@ body {
     content: '';
     width: 24px;
     height: 2px;
-    background-color: #f3efef;
+    background-color: #008080;
     position: absolute;
     left: 0;
 }
@@ -149,10 +154,48 @@ body {
     color: #007bff;
 }
 
+/*Responsive Navbar Setting*/
+@media (max-width: 768px) {
+    .navbar-toggler {
+        display: block;
+    }
+
+    .navbar-collapse {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #36454F;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 20px;
+    }
+
+    .navbar-collapse.open {
+        display: flex;
+    }
+
+    .navbar-nav {
+        flex-direction: column; 
+    }
+
+    .nav-item {
+        margin: 10px 0;
+    }
+
+    .logo-text {
+        display: none;
+    }
+
+    .rounded-logo {
+        margin-right: 10px;
+    }
+}
+
 /* Footer Styling */
 footer {
-    background-color: #333;
-    color: white;
+    background-color: #050505;
+    color: #858585;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -193,42 +236,5 @@ footer .container {
     animation: fadeOut 1s forwards;
 }
 
-/*Responsive Navbar Setting*/
-@media (max-width: 768px) {
-    .navbar-toggler {
-        display: block;
-    }
 
-    .navbar-collapse {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #2C3E50;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        padding: 10px 20px;
-    }
-
-    .navbar-collapse.open {
-        display: flex;
-    }
-
-    .navbar-nav {
-        flex-direction: column; 
-    }
-
-    .nav-item {
-        margin: 10px 0;
-    }
-
-    .logo-text {
-        display: block;
-        margin-left: 10px;
-    }
-
-    .rounded-logo {
-        margin-right: 10px;
-    }
-}
 

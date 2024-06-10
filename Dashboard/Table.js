@@ -7,7 +7,8 @@ fetch('../Dashboard/TableData.json')
         columns: [
             { data: 'PizzaName' },
             { data: 'TotalRevenue' },
-            { data: 'TotalQuantity' }
+            { data: 'TotalQuantity' },
+            { data: 'Category' }
         ],
         pageLength: 10,
         responsive: true

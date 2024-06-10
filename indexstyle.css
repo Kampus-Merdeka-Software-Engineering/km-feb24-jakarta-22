@@ -4,6 +4,15 @@
     box-sizing: border-box;   
 }
 
+.rotating-pizza {
+    animation: spin 15s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -15,7 +24,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    background-color: #E74C3C;
+    background-color: #101314;
     position: relative;
     z-index: 1001; 
 }
@@ -39,8 +48,9 @@ body {
     display: inline-block;
     width: 24px;
     height: 2px;
-    background-color: #fdeaea;
+    background-color: #DDDBCB;
     position: relative;
+    margin-bottom: 4px;
 }
 
 .navbar-toggler-icon::before,
@@ -48,7 +58,7 @@ body {
     content: '';
     width: 24px;
     height: 2px;
-    background-color: #f3efef;
+    background-color: #008080;
     position: absolute;
     left: 0;
 }
@@ -125,29 +135,33 @@ body {
 .hero {
     padding: 90px 15% 80px;
     text-align: center;
-    background-color: #fffbf6;
+    background-color: rgb(224, 217, 217);
     color: #302e29;
 }
 
 .hero h2 {
     font-size: 4.5rem;
     margin-bottom: 20px;
+    font-family: Montserrat;
 }
 
 .hero h2 span {
     color: #ff9100;
+    font-family: Montserrat;
 }
 
 .hero p {
     font-size: 1.1rem;
     color: #858585;
     margin-bottom: 30px;
+    font-family: Montserrat;
 }
 
 .hero img {
     max-width: 50%;
     height: auto;
     margin-bottom: 30px;
+    margin-top: 20px;
 }
 
 .hero .description {
@@ -179,8 +193,8 @@ body {
 
 /* Footer CSS */
 footer {
-    background-color: #333;
-    color: white;
+    background-color: #050505;
+    color: #858585;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -303,8 +317,7 @@ footer .container {
     }
 
     .logo-text {
-        display: block;
-        margin-left: 10px;
+        display: none;
     }
 
     .rounded-logo {

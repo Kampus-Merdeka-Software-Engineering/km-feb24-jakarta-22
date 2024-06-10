@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background-color: #f0f8ff; 
+    background-color: rgb(224, 217, 217);
 }
 
 .navbar {
@@ -12,11 +12,10 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    background-color: #f8f9fa;
+    background-color: #101314;
     border-bottom: 1px solid #e7e7e7;
     position: relative;
     z-index: 1001;
-    background-color: #E74C3C;
 }
 
 .container {
@@ -38,8 +37,9 @@ body {
     display: inline-block;
     width: 24px;
     height: 2px;
-    background-color: #333;
+    background-color: #DDDBCB;
     position: relative;
+    margin-bottom: 4px;
 }
 
 .navbar-toggler-icon::before,
@@ -47,7 +47,7 @@ body {
     content: '';
     width: 24px;
     height: 2px;
-    background-color: #333;
+    background-color: #008080;
     position: absolute;
     left: 0;
 }
@@ -147,8 +147,7 @@ body {
     }
 
     .logo-text {
-        display: block;
-        margin-left: 10px;
+        display: none;
     }
 
     .rounded-logo {
@@ -293,7 +292,8 @@ body {
     width: 90%;
     transition: margin-left 0.5s;
     overflow-x: auto;
-    padding: 15px; 
+    padding: 15px;
+    background-color: #eceaea; 
 }
 
 .table-container.table-move {
@@ -317,7 +317,8 @@ th {
 
 @media (max-width: 768px) {
     .table-container {
-        width: 100%;
+        width: 80%;
+        padding: 10px;
     }
 }
 
@@ -343,6 +344,7 @@ footer .container {
 .dataTables_wrapper {
     margin: 20px 0;
     font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
 }
 
 .dataTables_length {

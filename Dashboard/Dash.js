@@ -1,20 +1,46 @@
  // Sidebar Toggle Interactivity
-document.getElementById('sidebarToggle').addEventListener('click', function () {
+ document.getElementById('sidebarToggle').addEventListener('click', function () {
   var sidebar = document.getElementById('sidebar');
   var sidebarToggle = document.getElementById('sidebarToggle');
   var hoverText = sidebarToggle.querySelector('.hover-text');
+  var content = document.querySelector('.content');
+  var title = document.querySelector('.title-container');
 
   sidebar.classList.toggle('open');
   sidebarToggle.classList.toggle('open');
 
-  if (sidebar.classList.contains('open')) {
-      sidebarToggle.querySelector('span').innerHTML = '<';
-      hoverText.innerHTML = 'Close Sidebar';
+  // Check if the screen width is greater than 768px (desktop mode)
+  if (window.innerWidth > 768) {
+      if (sidebar.classList.contains('open')) {
+          sidebarToggle.querySelector('span').innerHTML = '<';
+          hoverText.innerHTML = 'Close Sidebar';
+          content.style.marginLeft = '270px'; // Increase margin when sidebar is open
+          title.style.marginLeft = '270px'; // Increase margin when sidebar is open
+      } else {
+          sidebarToggle.querySelector('span').innerHTML = '☰';
+          hoverText.innerHTML = 'Toggle Sidebar';
+          content.style.marginLeft = '50px'; // Shrink margin when sidebar is closed
+          title.style.marginLeft = '50px'; // Shrink margin when sidebar is closed
+      }
   } else {
-      sidebarToggle.querySelector('span').innerHTML = '☰';
-      hoverText.innerHTML = 'Toggle Sidebar';
+      // In responsive mode, maintain the original margin
+      content.style.marginLeft = '0';
   }
 });
+
+// Add a resize event listener to handle window resize
+window.addEventListener('resize', function() {
+  var content = document.querySelector('.content');
+  if (window.innerWidth <= 768) {
+      content.style.marginLeft = '0';
+  } else if (document.getElementById('sidebar').classList.contains('open')) {
+      content.style.marginLeft = '270px';
+  } else {
+      content.style.marginLeft = '50px';
+  }
+});
+
+
 
 
 // Footer Sentences Animations

@@ -2,161 +2,193 @@
   {
     "PizzaName": "The Brie Carre Pizza",
     "TotalRevenue": "11.588,50",
-    "TotalQuantity": 490
+    "TotalQuantity": 490,
+    "Category": "Supreme"
   },
   {
     "PizzaName": "The Big Meat Pizza",
     "TotalRevenue": "22.968,00",
-    "TotalQuantity": 1914
+    "TotalQuantity": 1914,
+    "Category": "Classic"
   },
   {
     "PizzaName": "The Five Cheese Pizza",
     "TotalRevenue": "26.066,50",
-    "TotalQuantity": 1409
+    "TotalQuantity": 1409,
+    "Category": "Veggie"
   },
   {
     "PizzaName": "The Spinach Supreme Pizza",
     "TotalRevenue": "15.277,75",
-    "TotalQuantity": 950
+    "TotalQuantity": 950,
+    "Category": "Supreme"
   },
   {
     "PizzaName": "The Soppressata Pizza",
     "TotalRevenue": "16.425,75",
-    "TotalQuantity": 961
+    "TotalQuantity": 961,
+    "Category": "Supreme"
   },
   {
     "PizzaName": "The Mediterranean Pizza",
     "TotalRevenue": "15.360,50",
-    "TotalQuantity": 934
+    "TotalQuantity": 934,
+    "Category": "Veggie"
   },
   {
     "PizzaName": "The Chicken Pesto Pizza",
     "TotalRevenue": "16.701,75",
-    "TotalQuantity": 973
+    "TotalQuantity": 973,
+    "Category": "Chicken"
   },
   {
     "PizzaName": "The Greek Pizza",
     "TotalRevenue": "27.447,50",
-    "TotalQuantity": 1392
+    "TotalQuantity": 1392,
+    "Category": "Classic"
   },
   {
     "PizzaName": "The Spinach Pesto Pizza",
     "TotalRevenue": "15.596,00",
-    "TotalQuantity": 970
+    "TotalQuantity": 970,
+    "Category": "Veggie"
   },
   {
     "PizzaName": "The Green Garden Pizza",
     "TotalRevenue": "13.955,75",
-    "TotalQuantity": 997
+    "TotalQuantity": 997,
+    "Category": "Veggie"
   },
   {
     "PizzaName": "The Pepperoni, Mushroom, and Peppers Pizza",
     "TotalRevenue": "18.834,50",
-    "TotalQuantity": 1359
+    "TotalQuantity": 1359,
+    "Category": "Classic"
   },
   {
     "PizzaName": "The Italian Capocollo Pizza",
     "TotalRevenue": "25.094,00",
-    "TotalQuantity": 1438
+    "TotalQuantity": 1438,
+    "Category": "Classic"
   },
   {
     "PizzaName": "The Spicy Italian Pizza",
     "TotalRevenue": "34.831,25",
-    "TotalQuantity": 1924
+    "TotalQuantity": 1924,
+    "Category": "Supreme"
   },
   {
     "PizzaName": "The Napolitana Pizza",
     "TotalRevenue": "24.087,00",
-    "TotalQuantity": 1464
+    "TotalQuantity": 1464,
+    "Category": "Classic"
   },
   {
     "PizzaName": "The Pepper Salami Pizza",
     "TotalRevenue": "25.529,00",
-    "TotalQuantity": 1446
+    "TotalQuantity": 1446,
+    "Category": "Supreme"
   },
   {
     "PizzaName": "The Mexicana Pizza",
     "TotalRevenue": "26.780,75",
-    "TotalQuantity": 1484
+    "TotalQuantity": 1484,
+    "Category": "Veggie"
   },
   {
     "PizzaName": "The Thai Chicken Pizza",
     "TotalRevenue": "43.434,25",
-    "TotalQuantity": 2371
+    "TotalQuantity": 2371,
+    "Category": "Chicken"
   },
   {
     "PizzaName": "The Hawaiian Pizza",
     "TotalRevenue": "32.273,25",
-    "TotalQuantity": 2422
+    "TotalQuantity": 2422,
+    "Category": "Classic"
   },
   {
     "PizzaName": "The Italian Vegetables Pizza",
     "TotalRevenue": "16.019,25",
-    "TotalQuantity": 981
+    "TotalQuantity": 981,
+    "Category": "Veggie"
   },
   {
     "PizzaName": "The Southwest Chicken Pizza",
     "TotalRevenue": "34.705,75",
-    "TotalQuantity": 1917
+    "TotalQuantity": 1917,
+    "Category": "Chicken"
   },
   {
     "PizzaName": "The Calabrese Pizza",
     "TotalRevenue": "15.934,25",
-    "TotalQuantity": 937
+    "TotalQuantity": 937,
+    "Category": "Supreme"
   },
   {
     "PizzaName": "The Spinach and Feta Pizza",
     "TotalRevenue": "23.271,25",
-    "TotalQuantity": 1446
+    "TotalQuantity": 1446,
+    "Category": "Veggie"
   },
   {
     "PizzaName": "The Sicilian Pizza",
     "TotalRevenue": "30.940,50",
-    "TotalQuantity": 1938
+    "TotalQuantity": 1938,
+    "Category": "Supreme"
   },
   {
     "PizzaName": "The Four Cheese Pizza",
     "TotalRevenue": "32.265,70",
-    "TotalQuantity": 1902
+    "TotalQuantity": 1902,
+    "Category": "Veggie"
   },
   {
     "PizzaName": "The Prosciutto and Arugula Pizza",
     "TotalRevenue": "24.193,25",
-    "TotalQuantity": 1457
+    "TotalQuantity": 1457,
+    "Category": "Supreme"
   },
   {
     "PizzaName": "The Vegetables + Vegetables Pizza",
     "TotalRevenue": "24.374,75",
-    "TotalQuantity": 1526
+    "TotalQuantity": 1526,
+    "Category": "Veggie"
   },
   {
     "PizzaName": "The Chicken Alfredo Pizza",
     "TotalRevenue": "16.900,25",
-    "TotalQuantity": 987
+    "TotalQuantity": 987,
+    "Category": "Chicken"
   },
   {
     "PizzaName": "The Pepperoni Pizza",
     "TotalRevenue": "30.161,75",
-    "TotalQuantity": 2418
+    "TotalQuantity": 2418,
+    "Category": "Classic"
   },
   {
     "PizzaName": "The Italian Supreme Pizza",
     "TotalRevenue": "33.476,75",
-    "TotalQuantity": 1884
+    "TotalQuantity": 1884,
+    "Category": "Supreme"
   },
   {
     "PizzaName": "The California Chicken Pizza",
     "TotalRevenue": "41.409,50",
-    "TotalQuantity": 2370
+    "TotalQuantity": 2370,
+    "Category": "Chicken"
   },
   {
     "PizzaName": "The Barbecue Chicken Pizza",
     "TotalRevenue": "42.768,00",
-    "TotalQuantity": 2432
+    "TotalQuantity": 2432,
+    "Category": "Chicken"
   },
   {
     "PizzaName": "The Classic Deluxe Pizza",
     "TotalRevenue": "38.180,50",
-    "TotalQuantity": 2453
+    "TotalQuantity": 2453,
+    "Category": "Classic"
   }
 ]
