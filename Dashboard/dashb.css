@@ -247,8 +247,9 @@ body {
 }
 .menu-item a{
     text-decoration: none;
-    color: white;
+    color: white; 
 }
+
 .menu-item:hover {
     background-color: #575757;
 }

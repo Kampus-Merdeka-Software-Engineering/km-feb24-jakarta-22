@@ -13,7 +13,18 @@ body {
     font-weight: bold;
     font-size: 30px;
     margin-bottom: 0px;
+    display: flex;
+    align-items: center;
 }
+
+.title-about::before,
+.title-about::after {
+    content: "";
+    flex: 1;
+    border-bottom: 2px solid #000; /* Adjust color and thickness as needed */
+    margin: 0 10px; /* Adjust space between lines and text as needed */
+}
+
 .team-container {
     display: flex;
     flex-wrap: wrap;
@@ -37,6 +48,7 @@ body {
 }
 .team-member h3 {
     margin: 10px 0 5px;
+    color: #FFFFFA;
 }
 .team-member p {
     margin: 0;

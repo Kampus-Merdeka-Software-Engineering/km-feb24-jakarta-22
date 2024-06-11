@@ -1,7 +1,7 @@
 // Footer Sentences Animations
 document.addEventListener('DOMContentLoaded', () => {
     const sentences = [
-      "&copy; 2024 Team-22 Revou. All Rights Reserved.",
+      "&copy; 2024 Team-22 Revou Jakarta Section. All Rights Reserved.",
       "Those Who Seek, They Shall Receive",
       "A Hero Need Not Speak. When He Is Gone, The World Will Speak For Him - Master Chief",
       "You Can Take My Name, But You Never Have My Heart - Skyfall",
@@ -44,13 +44,13 @@ document.getElementById('sidebarToggle').addEventListener('click', function () {
     // Check if the screen width is greater than 768px (desktop mode)
     if (window.innerWidth > 768) {
         if (sidebar.classList.contains('open')) {
-            sidebarToggle.querySelector('span').innerHTML = '<';
-            hoverText.innerHTML = 'Close Sidebar';
+            sidebarToggle.querySelector('span').innerHTML = '☰';
+            hoverText.innerHTML = 'Close Menu';
             content.style.marginLeft = '270px'; // Increase margin when sidebar is open
             title.style.marginLeft = '270px'; // Increase margin when sidebar is open
         } else {
             sidebarToggle.querySelector('span').innerHTML = '☰';
-            hoverText.innerHTML = 'Toggle Sidebar';
+            hoverText.innerHTML = 'Toggle Menu';
             content.style.marginLeft = '50px'; // Shrink margin when sidebar is closed
             title.style.marginLeft = '50px'; // Shrink margin when sidebar is closed
         }

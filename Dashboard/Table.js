@@ -32,11 +32,11 @@ document.getElementById('sidebarToggle').addEventListener('click', function () {
     sidebarToggle.classList.toggle('open');
   
     if (sidebar.classList.contains('open')) {
-        sidebarToggle.querySelector('span').innerHTML = '<';
-        hoverText.innerHTML = 'Close Sidebar';
+        sidebarToggle.querySelector('span').innerHTML = '☰';
+        hoverText.innerHTML = 'Close Menu';
     } else {
         sidebarToggle.querySelector('span').innerHTML = '☰';
-        hoverText.innerHTML = 'Toggle Sidebar';
+        hoverText.innerHTML = 'Toggle Menu';
     }
 });
 
@@ -49,7 +49,7 @@ categoryDashboard.classList.toggle('active');
 // Footer Sentences Animations
 document.addEventListener('DOMContentLoaded', () => {
     const sentences = [
-      "&copy; 2024 Team-22 Revou. All Rights Reserved.",
+      "2024 Team-22 Revou Jakarta Section. All Rights Reserved.",
       "Those Who Seek, They Shall Receive",
       "A Hero Need Not Speak. When He Is Gone, The World Will Speak For Him - Master Chief",
       "You Can Take My Name, But You Never Have My Heart - Skyfall",
@@ -76,4 +76,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   
     setInterval(changeSentence, 5000); 
-  });
+});
